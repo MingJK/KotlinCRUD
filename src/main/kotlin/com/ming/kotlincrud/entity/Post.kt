@@ -8,11 +8,11 @@ import jakarta.persistence.*
 class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private val postId: Long? = null
+    var postId: Long? = null
 
-    private val title: String? = null
+    var title: String? = null
 
-    private val content: String? = null
+    var content: String? = null
 
-    private val writer : String? = null
+    var writer : String? = null
 }
