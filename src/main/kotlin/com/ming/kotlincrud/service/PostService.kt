@@ -11,4 +11,8 @@ class PostService
     public fun findAll(): List<Post> {
         return postRepository.findAll()
     }
+
+    public fun save(post : Post): Post {
+        return postRepository.save(post)
+    }
 }
