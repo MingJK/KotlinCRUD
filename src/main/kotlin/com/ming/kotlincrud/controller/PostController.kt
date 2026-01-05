@@ -5,7 +5,6 @@ import com.ming.kotlincrud.service.PostService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
@@ -26,11 +25,5 @@ class PostController
     @GetMapping("/delete/{id}")
     fun delete(@PathVariable("id") id: Long) {
         return postService.deleteById(id)
-    }
-
-    @PutMapping("/update/{id}")
-    fun update(@PathVariable("id") id: Long, @RequestBody post: Post): Post {
-        post.postId = id
-        return postService.save(post)
     }
 }

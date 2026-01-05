@@ -19,6 +19,4 @@ class PostService
     public fun deleteById(id: Long) {
         return postRepository.deleteById(id)
     }
-
-
 }
