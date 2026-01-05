@@ -15,4 +15,8 @@ class PostService
     public fun save(post : Post): Post {
         return postRepository.save(post)
     }
+
+    public fun deleteById(id: Long) {
+        return postRepository.deleteById(id)
+    }
 }
